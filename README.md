@@ -1,5 +1,11 @@
 # Automated Solution Testing Pipeline Readme
 
+## Vulnerabilites found and patched
+
+Use of unsafe yaml load that allows instantiation of arbitrary objects was replaced with yaml.safe_load().
+subprocess call with shell=True was identified, and was replaced with shell=False.
+
+
 ## Quick Start
 
 <a href="https://console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks/new?stackName=MyTestingPipeline&templateURL=https://testing-pipeline-amc-sa.s3.amazonaws.com/Pipeline_Template.yml" target="_blank"><img src="https://s3.amazonaws.com/cloudformation-examples/cloudformation-launch-stack.png"/></a>

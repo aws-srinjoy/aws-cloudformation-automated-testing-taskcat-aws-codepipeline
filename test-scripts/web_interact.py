@@ -66,7 +66,7 @@ def curl_cmd(command):
         :return: output from command
     """
     try:
-        ret = subprocess.check_output(command, shell=True)
+        ret = subprocess.check_output(command, shell=False)
     except Exception as e:
         print(e)
         return str(e)
